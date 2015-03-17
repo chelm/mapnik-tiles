@@ -1,0 +1,26 @@
+{
+  "name": "mapnik-tiles",
+  "version": "1.0.0",
+  "description": "A simple mapnik wrapper that creates png, pbf, or utf grids from a chunk of geojson",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chelm/mapnik-tiles"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelm/mapnik-tiles/issues"
+  },
+  "homepage": "https://github.com/chelm/mapnik-tiles",
+  "dependencies": {
+    "mapnik": "^3.1.6",
+    "sphericalmercator": "^1.0.3"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  }
+}
