@@ -2,8 +2,7 @@ var mapnik = require('mapnik'),
   path = require('path'), 
   fs = require('fs'),
   zlib = require('zlib'),
-  mercator = new(require('sphericalmercator'))(),
-  mapnikify = require('geojson-mapnikify');
+  mercator = new(require('sphericalmercator'))();
 
 //mapnik.register_default_input_plugins();
 mapnik.register_datasource(path.join(mapnik.settings.paths.input_plugins,'geojson.input'));
