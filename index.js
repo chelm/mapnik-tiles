@@ -80,7 +80,12 @@ exports.generate = function( geojson, params, callback ) {
 var createStyleSheet = function(geojson, layerName, callback){
   try {
     var template = fs.readFileSync(__dirname + '/lib/stylesheet.xml', 'utf8');
-    var geom_type = geojson.features[0].geometry.type.toLowerCase();
+    var geom_type;
+    if (geojson && geojson.features && geojson.features[0] && geojson.features[0].geometry){
+      geom_type = geojson.features[0].geometry.type.toLowerCase();
+    } else {
+      geom_type = 'point';
+    }
     template = template.replace('{{name}}', layerName);
     template = template.replace('{{style}}', geom_type);
     template = template.replace('{{geojson}}', JSON.stringify( geojson ) );
