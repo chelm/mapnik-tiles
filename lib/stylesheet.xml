@@ -4,7 +4,7 @@
       <PolygonSymbolizer fill="darkblue" fill-opacity=".75"/>
     </Rule>
   </Style>
-  <Style name="point">
+  <Style name="point" filter-mode="first">
     <Rule>
       <MarkersSymbolizer fill="#55AADD" opacity=".75" width="10.5" stroke="white" stroke-width="2" stroke-opacity=".25" placement="point" marker-type="ellipse" allow-overlap="true"/>
     </Rule>
@@ -26,7 +26,7 @@
       <PolygonSymbolizer fill="darkblue" fill-opacity=".75"/>
     </Rule>
   </Style>
-  <Layer name="{{name}}" status="on" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  <Layer name="{{name}}" status="on" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs" buffer-size="128">
         <StyleName>{{style}}</StyleName>
         <Datasource>
             <Parameter name="type">geojson</Parameter>
