@@ -42,7 +42,6 @@ exports.generate = function( geojson, params, callback ) {
     else if (format == 'vector.pbf' || format == 'pbf') {
 
       var vtile = new mapnik.VectorTile( params.z, params.x, params.y );
-      console.log(vtile)
 
       map.render( vtile, {}, function( err, vtile ) {
         if (err) {
