@@ -50,7 +50,7 @@ tape('generate polygon tiles', function (t) {
       y: 5
     };
 
-    // return png buffer
+    // return utf buffer
     tiles.generate(polygons445, params, function(err, tile){
       fs.writeFile( __dirname + '/out/polygons.4.4.5.utf', JSON.stringify(tile), function( err ) {
         t.equals(JSON.stringify(tile), JSON.stringify(polygonUTF));

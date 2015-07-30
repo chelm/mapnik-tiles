@@ -63,8 +63,7 @@ exports.generate = function( geojson, params, callback ) {
           callback( err, null );
         } 
         else {
-            var utf = g.encodeSync('utf', {resolution: 4});
-            callback( null, utf );
+          g.encode({features:true, resolution: 4}, callback)
         }
       });
 

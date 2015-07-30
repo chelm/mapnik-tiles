@@ -1,10 +1,10 @@
 {
   "name": "mapnik-tiles",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple mapnik wrapper that creates png, pbf, or utf grids from a chunk of geojson",
   "main": "index.js",
   "scripts": {
-    "test": "node test/*.js"
+    "test": "node test/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "sphericalmercator": "^1.0.3"
   },
   "devDependencies": {
+    "tap-spec": "^4.0.2",
     "tape": "^3.5.0"
   }
 }
